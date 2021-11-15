@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+:root
+{
+   --primary-cor:#fff;
+   --secondary-cor:#fff;
+   --three-cor:#2c3e50;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-image: linear-gradient(90deg, var(--three-cor), #384657);
+    font-family: 'Inconsolata',sans-serif;
+    font-weight: 900;
+    /*display: flex;          /*coloca tudo em linha*/
+    /*flex-direction: column; /*coloca tudo em coluna*/
+    /*align-items: center;    /*alinha horizontalmente*/
+    /*justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
+    height: 100vh;
+    /*overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
+    /*margin: 0;
+   /* overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
+}
+
+.slider-main{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.esq-slide{
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.esq-slide > div {
+    height: 100%;
+    width: 100%;/*100% DE 35%*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.esq-slide h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    text-align: center;
+}
+
+.dir-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform .5s ease-in-out;
+}
+
+.dir-slide > div {
+   background-repeat: no-repeat;
+   background-size: cover; 
+   background-position: center center;
+   height: 100%;
+   width: 100%;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 60px;
+    padding: 15px;
+}
+
+button:hover{
+    color:#222;
+}
+
+button:focus{
+    outline: none;
+}
+
+.slider-main .action-btn button{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+.slider-main .action-btn .up-btn{
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.slider-main .action-btn .down-btn{
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+
+@media(max-width: 480px)        /*para ecras mais pequenos*/
+{
+    body{
+        overflow:visible;
+    }
+
+    footer 
+    {
+        /* display: none; */
+    };
+
+}
+
+@media (max-width: 800px)
+{
+    body{
+        overflow:visible;
+    }
+    footer 
+    {
+        /* display: none; */
+    };
+  
+
+}
+
+
+/*estilos do footer */
+
+
+
+footer{
+    font-size: 0.8rem;
+    color: var(--primary-cor);
+    font-family:'Inconsolata',sans-serif ;
+    text-align: left;
+    /* border-top: 1px dashed; */
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    
+    
+    transform: translate(-0%, -0%);
+    
+}
+
+footer a{
+   color: var(--primary-cor);  /*cor dos links a preto*/
+   text-decoration: none;     /*retira o sublinhado dos links*/
+  
+}
+
+footer a:hover{
+    color: rgb(247, 0, 0);
+}
+
+
+
+
